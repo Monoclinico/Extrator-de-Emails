@@ -50,10 +50,7 @@ h1 {
   color: white;
   border: unset;
 }
-#alphabetlist option{
-  font-size: 1.1em;
-  font-weight: bold;
-}
+
 #testbutton {
   grid-row-start:1;
   grid-row-end: 2;
