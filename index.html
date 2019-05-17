@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Extrator De Email</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='./mainstyle.css'>
+</head>
+<body>
+  <h1>Extrator De Email</h1>
+  <div id="main">
+    <form id="menu" >
+      <input type="checkbox" id="nonumbers"/>Só Emails Sem Números
+      <input type="checkbox" id="checkalphabet"/>Emails que começam com
+      <select id="alphabetlist">
+          <option value="a">a</option>
+          <option value="b">b</option>
+          <option value="c">c</option>
+          <option value="d">d</option>
+          <option value="e">e</option>
+          <option value="f">f</option>
+          <option value="g">g</option>
+          <option value="h">h</option>
+          <option value="i">i</option>
+          <option value="j">j</option>
+          <option value="k">k</option>
+          <option value="l">l</option>
+          <option value="m">m</option>
+          <option value="n">n</option>
+          <option value="o">o</option>
+          <option value="p">p</option>
+          <option value="q">q</option>
+          <option value="r">r</option>
+          <option value="s">s</option>
+          <option value="t">t</option>
+          <option value="u">u</option>
+          <option value="v">v</option>
+          <option value="w">w</option>
+          <option value="x">x</option>
+          <option value="y">y</option>
+          <option value="z">z</option>
+        </select>
+      <br/>
+      <input type="checkbox" id="alphaorder"/>Deixar em Ordem Alfabética
+      <input type="checkbox" id="lowerall"/>Deixar em Minúsculo
+
+    </form>
+    <button id="testbutton">EXTRAIR</button>
+    <select id="optionsmail">
+      <option value="all">Todos os tipos</option>
+      <option value="gmail">Gmail</option>
+      <option value="hotmail">Hotmail</option>
+      <option value="outlook">Outlook</option> 
+      <option value="yahoo">Yahoo</option>
+      <option value="zoho">Zoho</option>
+      <option value="icloud">iCloud</option>
+    </select>
+    <button id="clearall">LIMPAR</button>
+    <div id="number"><p id="numberemails">Emails Extraídos:<span id="numberemailsn"></span></p></div>
+    <button id="copybutton">SELECIONAR TUDO</button>
+    <textarea id="datatext">
+    </textarea>
+    <textarea id="emails" readonly>
+    </textarea>
+  </div>
+  <script type="text/javascript" src="./mainscript.js">
+  </script>
+</body>
+</html>
