@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -8,11 +8,11 @@
   <link rel='stylesheet' type='text/css' href='./mainstyle.css'>
 </head>
 <body>
-  <h1>Extrator De Email</h1>
+  <h1>Extrator de Email</h1>
   <div id="main">
     <form id="menu" >
-      <input type="checkbox" id="nonumbers"/>Só Emails Sem Números
-      <input type="checkbox" id="checkalphabet"/>Emails que começam com
+      <div class="menu-boxs"><input type="checkbox" id="nonumbers"/>Só Emails Sem Números</div>
+      <div class="menu-boxs"><input type="checkbox" id="checkalphabet"/>Emails que começam com
       <select id="alphabetlist">
           <option value="a">a</option>
           <option value="b">b</option>
@@ -40,10 +40,9 @@
           <option value="x">x</option>
           <option value="y">y</option>
           <option value="z">z</option>
-        </select>
-      <br/>
-      <input type="checkbox" id="alphaorder"/>Deixar em Ordem Alfabética
-      <input type="checkbox" id="lowerall"/>Deixar em Minúsculo
+        </select></div>
+      <div class="menu-boxs"><input type="checkbox" id="alphaorder"/>Deixar em Ordem Alfabética</div>
+      <div class="menu-boxs"><input type="checkbox" id="lowerall"/>Deixar em Minúsculo</div>
 
     </form>
     <button id="testbutton">EXTRAIR</button>
@@ -57,7 +56,7 @@
       <option value="icloud">iCloud</option>
     </select>
     <button id="clearall">LIMPAR</button>
-    <div id="number"><p id="numberemails">Emails Extraídos:<span id="numberemailsn"></span></p></div>
+    <div id="number"><p id="numberemails">Emails Extraídos:<span id="numberemailsn">0</span></p></div>
     <button id="copybutton">SELECIONAR TUDO</button>
     <textarea id="datatext">
     </textarea>

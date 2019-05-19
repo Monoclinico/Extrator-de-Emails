@@ -2,37 +2,63 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 html,body {
   background-color: white;
   margin: 0;
   padding: 0;
+  font-size: 15px;
 }
 body {
   padding: 10px;
+  color: white;
+}
+button, select {
+  color: white;
+  font-size: 1.2rem;
+  border: 2px solid white;
+}
+button:hover, select:hover {
+  cursor: pointer;
+}
+h1, #main {
+  border-top: 4px solid #2d8ddb;
+  border-bottom: 4px solid #2d8ddb;
+  background-color: #da2a2a;
 }
 h1 {
   text-align: center;
   margin-top: 1%;
-  border-top: 4px solid #2d8ddb;
-  border-bottom: 4px solid #f4c20d;
-  background-color: #da2a2a;
-  color: white;
+  font-size: 2rem;
+}
+#datatext, #emails {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  height: 400px;
+  resize: none;
+  color: black;
+  font-size: 1rem;
+}
+#alphabetlist, #testbutton, #optionsmail  {
+  background-color: #2d8ddb;
+}
+#alphabetlist, #number {
+  font-size: 1.1rem;
+}
+
+.menu-boxs {
+  display: inline-block;
 }
 #main {
   position: relative;
   display: grid;
-  grid-template-columns: auto auto auto auto; 
+  grid-template-columns: auto auto 22% 22%; 
   grid-template-rows: auto auto auto; 
   margin: 0;
   width: 100%;
   height: unset;
-  padding: 1%;
+  padding: 5px;
   grid-gap: 0.5%;
-  background-color: #da2a2a;
-  border-top: 4px solid #2d8ddb;
-  border-bottom: 4px solid #f4c20d;
-
+  overflow: hidden;
 }
 
 #menu {
@@ -40,110 +66,152 @@ h1 {
   grid-row-end: 2;
   grid-column-start:1;
   grid-column-end:4;
-  width: 100%;
-  font-size: 1.1em;
-  color: white;
-}
-#alphabetlist {
-  font-size: 1.1em;
-  background-color: #2d8ddb;
-  color: white;
-  border: unset;
-}
+  width: auto;
+  font-size: 1.1rem;
 
+}
 #testbutton {
   grid-row-start:1;
   grid-row-end: 2;
   grid-column-start:4;
   grid-column-end:5;
-  width: 100%;
-  height: 100%; 
-  color: white;
-  font-size: 2em;
-  background-color: #2d8ddb;
-  border: 2px solid white;
+  width: auto;
+  font-size: 2rem;
 }
 #testbutton:hover {
   background-color: #59a3e0;
-  cursor: pointer;
 }
 #optionsmail {
   grid-row-start:2;
   grid-row-end: 3;
   grid-column-start:1;
   grid-column-end: 2;
-  font-size: 1.1em;
-  color: white;
-  background-color: #2d8ddb;
-  border: 2px solid white;
 }
-
 #clearall {
   grid-row-start:2;
   grid-row-end: 3;
   grid-column-start:2;
   grid-column-end:3;
-  width: 100%;
-  height: 100%;
-  color: white;
-  font-size: 1.2em;
+  width: auto;
   background-color: #3cba54;
-  border: 2px solid white;
 }
 #clearall:hover {
   background-color: rgb(51, 218, 51);
-  cursor: pointer;
 }
 #number {
   grid-row-start:2;
   grid-row-end: 3;
   grid-column-start:3;
   grid-column-end:4;
-  width: 70%;
-  height: 100%;
-  margin-right: -20%;
-  font-size: 1.2em;
-  color: white;
+  display: block;
+  position: relative;
+  width: auto;
+  height: auto;
+  margin: 0;
   padding: 0;
-  line-height: 200%;
 }
 #numberemails {
-  display: inline;
+  text-align: center;
+  margin:0;
 }
-#numberemailsn {
-  padding-left: 10px;
-}
+
 #copybutton {
   grid-row-start:2;
   grid-row-end: 3;
   grid-column-start:4;
   grid-column-end:5;
-  width: 100%;
-  height: 100%;
-  color: white;
-  font-size: 1.2em;
+  width: auto;
   background-color: #f4c20d;
-  border: 2px solid white;
 }
 #copybutton:hover {
   background-color: #f7d250;
-  cursor: pointer;
 }
 #datatext {
-  grid-row-start: 3;
-  grid-row-end: 4;  
   grid-column-start:1;
   grid-column-end: 3;
-  height: 400px;
-  resize: none;
-  color: black;
 }
 #emails {
-  grid-row-start: 3;
-  grid-row-end: 4;
   grid-column-start: 3;
   grid-column-end: 5;
-  height: 400px;
-  resize: none;
-  color: black;
 }
+
+@media screen and (max-width: 700px){
+  html, body {font-size: 10px;}
+}
+@media screen and (max-width: 500px){
+  html, body {font-size: 8px;}
+}
+@media screen and (max-width: 420px){
+  #main{
+    grid-template-columns: auto auto auto auto; 
+    grid-template-rows: auto auto auto auto auto auto; 
+  }
+  #menu {
+    grid-row-start:1;
+    grid-row-end: 2;
+    grid-column-start:1;
+    grid-column-end:5;
+    width: auto;
+    font-size: 1.1rem;
+  }  
+  #optionsmail {
+    grid-row-start:2;
+    grid-row-end: 3;
+    grid-column-start:1;
+    grid-column-end: 3;
+  }
+  #clearall {
+    grid-row-start:2;
+    grid-row-end: 3;
+    grid-column-start:3;
+    grid-column-end:5;
+    width: auto;
+    background-color: #3cba54;
+  }
+  #datatext {
+    grid-row-start:3;
+    grid-row-end: 4;
+    grid-column-start:1;
+    grid-column-end: 5;
+  }  
+  #testbutton {
+    grid-row-start:4;
+    grid-row-end: 5;
+    grid-column-start:1;
+    grid-column-end:2;
+    width: auto;
+    font-size: 2rem;
+  }  
+  #number {
+    grid-row-start:4;
+    grid-row-end: 5;
+    grid-column-start:2;
+    grid-column-end:4;
+    display: block;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #copybutton {
+    grid-row-start:4;
+    grid-row-end: 5;
+    grid-column-start:4;
+    grid-column-end:5;
+    width: auto;
+    background-color: #f4c20d;
+  }
+  #emails {
+    grid-row-start: 5; 
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  button, select {
+    color: white;
+    font-size: 1.5rem;
+    border: 2px solid white;
+  }  
+} 
