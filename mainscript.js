@@ -5,6 +5,7 @@ var E$outlook = /(\s|^)([A-z0-9\.]+)(\@)(outlook)(\.com)/;
 var E$yahoo = /(\s|^)([A-z0-9\.]+)(\@)(yahoo)(\.com)/;
 var E$zoho = /(\s|^)([A-z0-9\.]+)(\@)(zoho)(\.com)/;
 var E$icloud = /(\s|^)([A-z0-9\.]+)(\@)(icloud)(\.com)/;
+var E$uol = /(\s|^)([A-z0-9\.]+)(\@)(uol)(\.com)((\.br))/;
 
 document.getElementById('testbutton').addEventListener('click',matchPattern);
 document.getElementById('clearall').addEventListener('click',clearAll);
@@ -40,6 +41,9 @@ function matchPattern (){
       break;
     case 'icloud':
       pattern$text = E$icloud;
+      break;
+    case 'uol':
+      pattern$text = E$uol;
       break;
     default:
       pattern$text = E$all;
