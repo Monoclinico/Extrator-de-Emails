@@ -31,6 +31,10 @@ h1, #main {
   background-color: #88bbd6;
   opacity: 0.88;
 }
+#img-logo {
+  margin: 0;
+  width: 3rem;
+}
 h1 {
   text-align: center;
   margin-top: 1%;
