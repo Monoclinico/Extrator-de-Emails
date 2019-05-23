@@ -3,7 +3,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 html,body {
-  background-color: white;
+  background-color: unset;
   margin: 0;
   padding: 0;
   font-size: 15px;
@@ -11,11 +11,16 @@ html,body {
 body {
   padding: 10px;
   color: white;
+  background-image: url(imagens/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 button, select {
   color: white;
   font-size: 1.2rem;
-  border: 2px solid white;
+  border: 2px solid #cdcdcd;
 }
 button:hover, select:hover {
   cursor: pointer;
@@ -23,7 +28,8 @@ button:hover, select:hover {
 h1, #main {
   border-top: 4px solid #2d8ddb;
   border-bottom: 4px solid #2d8ddb;
-  background-color: #da2a2a;
+  background-color: #88bbd6;
+  opacity: 0.88;
 }
 h1 {
   text-align: center;
