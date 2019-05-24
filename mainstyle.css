@@ -24,7 +24,7 @@ button, select {
 button:hover, select:hover {
   cursor: pointer;
 }
-h1, #main {
+h1, #main, #footer {
   border-top: 4px solid #2d8ddb;
   border-bottom: 4px solid #2d8ddb;
   background-color: #88bbd6;
@@ -146,7 +146,15 @@ h1 {
   grid-column-start: 3;
   grid-column-end: 5;
 }
-
+#footer {
+  width: auto;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+#footer-text {
+  font-size: 1.2rem;
+  text-align: center;
+}
 @media screen and (max-width: 700px){
   html, body {font-size: 10px;}
 }
@@ -163,7 +171,6 @@ h1 {
     grid-row-end: 2;
     grid-column-start:1;
     grid-column-end:5;
-    width: auto;
     font-size: 1.3rem;
   }  
   #optionsmail {
@@ -177,7 +184,6 @@ h1 {
     grid-row-end: 3;
     grid-column-start:3;
     grid-column-end:5;
-    width: auto;
   }
   #datatext {
     grid-row-start:3;
@@ -192,7 +198,6 @@ h1 {
     grid-row-end: 5;
     grid-column-start:1;
     grid-column-end:2;
-    width: auto;
     font-size: 2rem;
   }  
   #number {
@@ -200,12 +205,6 @@ h1 {
     grid-row-end: 5;
     grid-column-start:2;
     grid-column-end:4;
-    display: block;
-    position: relative;
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: 0;
   }
   #numberemailsn {
     font-size: 1.5rem;
@@ -215,7 +214,6 @@ h1 {
     grid-row-end: 5;
     grid-column-start:4;
     grid-column-end:5;
-    width: auto;
   }
   #emails {
     grid-row-start: 5; 
