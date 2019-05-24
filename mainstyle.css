@@ -39,8 +39,6 @@ h1 {
   text-align: center;
   margin-top: 1%;
   font-size: 2rem;
-  text-decoration: underline;
-  text-decoration-color: #2d8ddb;
 }
 #datatext, #emails {
   grid-row-start: 3;
@@ -187,6 +185,7 @@ h1 {
     grid-column-start:1;
     grid-column-end: 5;
     font-size: 1.3rem;
+    height: 200px;
   }  
   #testbutton {
     grid-row-start:4;
@@ -224,6 +223,7 @@ h1 {
     grid-column-start: 1;
     grid-column-end: 5;
     font-size: 1.4rem;
+    height: 300px;
   }
   button, select {
     font-size: 1.5rem;
