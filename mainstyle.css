@@ -3,14 +3,13 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 html,body {
-  background-color: unset;
   margin: 0;
   padding: 0;
   font-size: 15px;
 }
 body {
   padding: 10px;
-  color: white;
+  color: #ffffff;
   background-image: url(imagens/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,9 +17,9 @@ body {
   background-position: center center;
 }
 button, select {
-  color: white;
+  color: #ffffff;
   font-size: 1.2rem;
-  border: 2px solid #cdcdcd;
+  border: 2px solid #ffffff;
 }
 button:hover, select:hover {
   cursor: pointer;
@@ -33,12 +32,15 @@ h1, #main {
 }
 #img-logo {
   margin: 0;
-  width: 3rem;
+  width: 5rem;
+  vertical-align: middle;
 }
 h1 {
   text-align: center;
   margin-top: 1%;
   font-size: 2rem;
+  text-decoration: underline;
+  text-decoration-color: #2d8ddb;
 }
 #datatext, #emails {
   grid-row-start: 3;
@@ -178,7 +180,6 @@ h1 {
     grid-column-start:3;
     grid-column-end:5;
     width: auto;
-    background-color: #3cba54;
   }
   #datatext {
     grid-row-start:3;
@@ -216,7 +217,6 @@ h1 {
     grid-column-start:4;
     grid-column-end:5;
     width: auto;
-    background-color: #f4c20d;
   }
   #emails {
     grid-row-start: 5; 
@@ -226,8 +226,6 @@ h1 {
     font-size: 1.4rem;
   }
   button, select {
-    color: white;
     font-size: 1.5rem;
-    border: 2px solid white;
   }  
 } 

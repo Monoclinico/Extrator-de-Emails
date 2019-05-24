@@ -3,16 +3,17 @@
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <link rel="icon" href="imagens/icone.ico" type="image/x-icon"/>
   <title>Extrator De Email</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' href='./mainstyle.css'>
 </head>
 <body>
-  <h1><img id="img-logo" src="imagens/logo.png"/>Extrator de Email</h1>
+  <h1><img id="img-logo" src="imagens/logo.png" alt="logo de cara de urso" title="Bear Extrator"/>Bear Extrator</h1>
   <div id="main">
     <form id="menu" >
-      <div class="menu-boxs"><input type="checkbox" id="nonumbers"/>Só Emails Sem Números</div>
-      <div class="menu-boxs"><input type="checkbox" id="checkalphabet"/>Emails que começam com
+      <div class="menu-boxs"><input type="checkbox" id="nonumbers"/><span>Só Emails Sem Números</span></div>
+      <div class="menu-boxs"><input type="checkbox" id="checkalphabet"/><span>Emails que começam com</span>
       <select id="alphabetlist">
           <option value="a">a</option>
           <option value="b">b</option>
@@ -40,10 +41,10 @@
           <option value="x">x</option>
           <option value="y">y</option>
           <option value="z">z</option>
-        </select></div>
-      <div class="menu-boxs"><input type="checkbox" id="alphaorder"/>Deixar em Ordem Alfabética</div>
-      <div class="menu-boxs"><input type="checkbox" id="lowerall"/>Deixar em Minúsculo</div>
-
+        </select>
+      </div>
+      <div class="menu-boxs"><input type="checkbox" id="alphaorder"/><span>Deixar em Ordem Alfabética</span></div>
+      <div class="menu-boxs"><input type="checkbox" id="lowerall"/><span>Deixar em Minúsculo</span></div>
     </form>
     <button id="testbutton">EXTRAIR</button>
     <select id="optionsmail">
