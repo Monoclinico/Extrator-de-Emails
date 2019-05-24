@@ -1,8 +1,8 @@
 # Extrator de Emails
 
-## É absolutamente simples de se usar. 
+## Extrator de Emails Bear é absolutamente simples de se usar!
 
-O propósito do Extrator de Emails é fazer com que seja viável, rápido e simples a extração de vários tipos de edereços emails que estão dispersos em algum tipo de texto, documento ou página.
+O propósito do Extrator de Emails Bear é fazer com que seja viável, rápido e simples a extração de vários tipos de edereços emails que estão dispersos em algum tipo de texto, documento ou página.
 
 
 Construído em: 
