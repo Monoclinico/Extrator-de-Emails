@@ -61,9 +61,7 @@ function matchPattern (){
     var alphabet$list = document.getElementById("alphabetlist").value;
     pattern$text = pattern$text.replace("|^)","|^)("+alphabet$list.toString()+")");
   }  
-
   pattern$text = RegExp(pattern$text,'g')
-
   var list$emails = text$principal.match(pattern$text);  
   if (list$emails != null){
       if (lower$all) {
