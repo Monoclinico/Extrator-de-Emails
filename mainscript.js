@@ -11,8 +11,9 @@ var E$live = /(\s|^)([A-z0-9\.]+)(\@)(live)(\.com)/;
 document.getElementById('testbutton').addEventListener('click',matchPattern);
 document.getElementById('clearall').addEventListener('click',clearAll);
 document.getElementById('copybutton').addEventListener('click',copyAll);
-document.getElementById('datatext').value = "";
-document.getElementById('datatext').setAttribute("placeholder","Cole aqui o conteúdo de qualquer documento, site ou texto. Depois clique em Extrair!");
+var area1 = document.getElementById('datatext');
+area1.value= null;
+area1.setAttribute("placeholder","Cole aqui o conteúdo de qualquer documento, site ou texto. Depois clique em Extrair!");
 
 function matchPattern (){
   var text$principal = document.getElementById("datatext").value;
@@ -86,5 +87,5 @@ function copyAll (){
 }
 
 function clearAll () {
-  document.getElementById("datatext").value = "";
+  document.getElementById("datatext").value = null;
 }
