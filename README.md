@@ -10,3 +10,14 @@ Construído em:
 - CSS 3
 - JavaScript
 
+##Formatos abrangidos:  
+- Emails genéricos
+- Gmail
+- Hotmail
+- Outlook
+- Live
+- Yahoo
+- Zoho
+- iCloud
+- UOL
+
