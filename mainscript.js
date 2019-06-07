@@ -1,3 +1,4 @@
+//Incluir @GMAIL **Maiúsculo
 var E$all = /(\s|^)([A-z0-9\.]+)(\@)([A-z0-9\.]+)(\.com)((\.br)?)/;
 var E$gmail = /(\s|^)([A-z0-9\.]+)(\@)(gmail)(\.com)/;
 var E$hotmail = /(\s|^)([A-z0-9\.]+)(\@)(hotmail)(\.com)/;
@@ -8,12 +9,16 @@ var E$icloud = /(\s|^)([A-z0-9\.]+)(\@)(icloud)(\.com)/;
 var E$uol = /(\s|^)([A-z0-9\.]+)(\@)(uol)(\.com)((\.br))/;
 var E$live = /(\s|^)([A-z0-9\.]+)(\@)(live)(\.com)/;
 
+document.body.onload = function () {
+  document.getElementById("numberemailsn").innerHTML = 0;
+  clearAll("datatext");
+  clearAll("emails");
+}
+
 document.getElementById('testbutton').addEventListener('click',matchPattern);
-document.getElementById('clearall').addEventListener('click',clearAll);
+document.getElementById('clearall').addEventListener('click',function(){clearAll("datatext")});
 document.getElementById('copybutton').addEventListener('click',copyAll);
-var area1 = document.getElementById('datatext');
-area1.value= null;
-area1.setAttribute("placeholder","Cole aqui o conteúdo de qualquer documento, site ou texto. Depois clique em Extrair!");
+document.getElementById('datatext').setAttribute("placeholder","Cole aqui o conteúdo de qualquer documento, site ou texto. Depois clique em Extrair!");
 
 function matchPattern (){
   var text$principal = document.getElementById("datatext").value;
@@ -86,6 +91,6 @@ function copyAll (){
   document.execCommand('copy');
 }
 
-function clearAll () {
-  document.getElementById("datatext").value = null;
+function clearAll (area) {
+  document.getElementById(area).value = null;
 }
