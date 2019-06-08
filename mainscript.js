@@ -1,13 +1,13 @@
 //Incluir @GMAIL **Maiúsculo
-var E$all = /(\s|^)([A-z0-9\.]+)(\@)([A-z0-9\.]+)(\.com)((\.br)?)/;
-var E$gmail = /(\s|^)([A-z0-9\.]+)(\@)(gmail)(\.com)/;
-var E$hotmail = /(\s|^)([A-z0-9\.]+)(\@)(hotmail)(\.com)/;
-var E$outlook = /(\s|^)([A-z0-9\.]+)(\@)(outlook)(\.com)/;
-var E$yahoo = /(\s|^)([A-z0-9\.]+)(\@)(yahoo)(\.com)/;
-var E$zoho = /(\s|^)([A-z0-9\.]+)(\@)(zoho)(\.com)/;
-var E$icloud = /(\s|^)([A-z0-9\.]+)(\@)(icloud)(\.com)/;
-var E$uol = /(\s|^)([A-z0-9\.]+)(\@)(uol)(\.com)((\.br))/;
-var E$live = /(\s|^)([A-z0-9\.]+)(\@)(live)(\.com)/;
+var E$all = /(\s|^)([A-z0-9\.]+)(\@)([A-z0-9\.]+)((\.com)|(\.COM))((\.br)?)/;
+var E$gmail = /(\s|^)([A-z0-9\.]+)(\@)(gmail)((\.com)|(\.COM))/;
+var E$hotmail = /(\s|^)([A-z0-9\.]+)(\@)(hotmail)((\.com)|(\.COM))/;
+var E$outlook = /(\s|^)([A-z0-9\.]+)(\@)(outlook)((\.com)|(\.COM))/;
+var E$yahoo = /(\s|^)([A-z0-9\.]+)(\@)(yahoo)((\.com)|(\.COM))/;
+var E$zoho = /(\s|^)([A-z0-9\.]+)(\@)(zoho)((\.com)|(\.COM))/;
+var E$icloud = /(\s|^)([A-z0-9\.]+)(\@)(icloud)((\.com)|(\.COM))/;
+var E$uol = /(\s|^)([A-z0-9\.]+)(\@)(uol)((\.com)|(\.COM))((\.br))/;
+var E$live = /(\s|^)([A-z0-9\.]+)(\@)(live)((\.com)|(\.COM))/;
 
 document.body.onload = function () {
   document.getElementById("numberemailsn").innerHTML = 0;
