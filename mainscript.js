@@ -11,6 +11,7 @@ var E$live = /(\b|\s|^)([A-z0-9\.]+)(\@)(live)((\.com)|(\.COM))/;
 
 document.body.onload = function () {
   document.getElementById("numberemailsn").innerHTML = 0;
+  document.getElementById("separator").value = null;
   clearAll("datatext");
   clearAll("emails");
 }
@@ -21,6 +22,18 @@ document.getElementById('copybutton').addEventListener('click',copyAll);
 document.getElementById('datatext').setAttribute("placeholder","Cole aqui o conteúdo de qualquer documento, site ou texto. Depois clique em Extrair!");
 
 function matchPattern (){
+  function getSeparator() {
+    var sep$carac = document.getElementById("separator").value;
+    
+    if (typeof (sep$carac) != "string"){
+      sep$carac = String(sep$carac);
+    }
+    if ((sep$carac == undefined)||(sep$carac.length == 0)||(sep$carac == null)){
+      sep$carac = "\n";
+    }
+    return sep$carac;
+  }
+  
   var text$principal = document.getElementById("datatext").value;
   var p = document.getElementById("optionsmail").value;
   var no$numbers = document.getElementById("nonumbers").checked;
@@ -78,7 +91,7 @@ function matchPattern (){
       if (alpha$order) {
         list$emails.sort();
       }
-    document.getElementById("emails").value = list$emails.join("\n");
+    document.getElementById("emails").value = list$emails.join(getSeparator());
     document.getElementById("numberemailsn").innerHTML = list$emails.length;
   }else{
     document.getElementById("emails").value = 'Vazio';

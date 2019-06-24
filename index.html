@@ -45,6 +45,21 @@
       </div>
       <div class="menu-boxs"><input type="checkbox" id="alphaorder"/><span>Deixar em Ordem Alfabética</span></div>
       <div class="menu-boxs"><input type="checkbox" id="lowerall"/><span>Deixar em Minúsculo</span></div>
+      <div class="menu-boxs">
+        <span>Separar Emails com</span>
+        <input type="text" size="2" maxlength="3" id="separator" list="separatorslist"/>
+        <datalist id="separatorslist">
+          <option value="/">
+          <option value="|">
+          <option value="\">
+          <option value="-">
+          <option value="+">
+          <option value=",">
+          <option value=";">
+          <option value="#">
+          <option value="><">
+        </datalist>  
+      </div>
     </form>
     <button id="testbutton">EXTRAIR</button>
     <select id="optionsmail">
