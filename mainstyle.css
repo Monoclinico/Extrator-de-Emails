@@ -51,12 +51,18 @@ h1 {
 #alphabetlist, #testbutton, #optionsmail  {
   background-color: #2d8ddb;
 }
-#alphabetlist, #number {
+#alphabetlist, #number, #separator {
   font-size: 1.1rem;
 }
 
 .menu-boxs {
   display: inline-block;
+}
+#separator {
+  background-color:#2d8ddb;
+  border: 2px solid white;
+  color: white;
+  text-align: center;
 }
 #main {
   position: relative;
