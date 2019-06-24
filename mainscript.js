@@ -39,6 +39,7 @@ function matchPattern (){
   var no$numbers = document.getElementById("nonumbers").checked;
   var alpha$order = document.getElementById("alphaorder").checked;
   var lower$all = document.getElementById("lowerall").checked;
+  var double$mails = document.getElementById("doublemails").checked;
 
   switch (p) {
     case 'all':
@@ -81,7 +82,8 @@ function matchPattern (){
     pattern$text = pattern$text.replace("|^)","|^)("+alphabet$list.toString()+")");
   }  
   pattern$text = RegExp(pattern$text,'g')
-  var list$emails = text$principal.match(pattern$text);  
+  var list$emails = text$principal.match(pattern$text);
+  
   if (list$emails != null){
       if (lower$all) {
         list$emails = list$emails.map(function (l) {return l.trim().toLocaleLowerCase()});
@@ -90,6 +92,9 @@ function matchPattern (){
       }
       if (alpha$order) {
         list$emails.sort();
+      }
+      if (double$mails){
+        list$emails = list$emails.filter(function(e,i){return list$emails.indexOf(e) == i});
       }
     document.getElementById("emails").value = list$emails.join(getSeparator());
     document.getElementById("numberemailsn").innerHTML = list$emails.length;

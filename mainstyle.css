@@ -57,6 +57,10 @@ h1 {
 
 .menu-boxs {
   display: inline-block;
+  margin: 5px 0;
+}
+.menu-boxs::before {
+  content: "|"
 }
 #separator {
   background-color:#2d8ddb;
