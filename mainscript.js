@@ -1,19 +1,23 @@
-//Incluir @GMAIL **Maiúsculo
-var E$all = /(\b|\s|^)([A-z0-9\.]+)(\@)([A-z0-9\.]+)((\.com)|(\.COM))((\.br)?)/;
-var E$gmail = /(\b|\s|^)([A-z0-9\.]+)(\@)(gmail)((\.com)|(\.COM))/;
-var E$hotmail = /(\b|\s|^)([A-z0-9\.]+)(\@)(hotmail)((\.com)|(\.COM))/;
-var E$outlook = /(\b|\s|^)([A-z0-9\.]+)(\@)(outlook)((\.com)|(\.COM))/;
-var E$yahoo = /(\b|\s|^)([A-z0-9\.]+)(\@)(yahoo)((\.com)|(\.COM))/;
-var E$zoho = /(\b|\s|^)([A-z0-9\.]+)(\@)(zoho)((\.com)|(\.COM))/;
-var E$icloud = /(\b|\s|^)([A-z0-9\.]+)(\@)(icloud)((\.com)|(\.COM))/;
-var E$uol = /(\b|\s|^)([A-z0-9\.]+)(\@)(uol)((\.com)|(\.COM))((\.br))/;
-var E$live = /(\b|\s|^)([A-z0-9\.]+)(\@)(live)((\.com)|(\.COM))/;
+var E$all = /(\b|\s|^)([a-z0-9\.\_]+)(\@)([a-z0-9\.]+)((\.com))((\.br)?)/;
+var E$gmail = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(gmail)((\.com))/;
+var E$hotmail = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(hotmail)((\.com))/;
+var E$outlook = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(outlook)((\.com))/;
+var E$yahoo = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(yahoo)((\.com))((\.br)?)/;
+var E$zoho = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(zoho)((\.com))((\.br)?)/;
+var E$icloud = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(icloud)((\.com))/;
+var E$uol = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(uol)((\.com))((\.br)?)/;
+var E$live = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(live)((\.com))/;
+var E$terra = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(terra)((\.com))((\.br)?)/;
 
 document.body.onload = function () {
   document.getElementById("numberemailsn").innerHTML = 0;
   document.getElementById("separator").value = null;
   clearAll("datatext");
   clearAll("emails");
+  var list$of$inputs = document.querySelectorAll("input[type='checkbox']");
+  for (var pu = 0; pu < list$of$inputs.length;pu++ ){
+    list$of$inputs[pu].checked = false;
+  }
 }
 
 document.getElementById('testbutton').addEventListener('click',matchPattern);
@@ -40,6 +44,7 @@ function matchPattern (){
   var alpha$order = document.getElementById("alphaorder").checked;
   var lower$all = document.getElementById("lowerall").checked;
   var double$mails = document.getElementById("doublemails").checked;
+  var case$insensitive = document.getElementById("caseinsensitive").checked;
 
   switch (p) {
     case 'all':
@@ -69,6 +74,9 @@ function matchPattern (){
     case 'live':
       pattern$text = E$live;
       break;
+    case 'terra':
+      pattern$text = E$terra;
+      break;  
     default:
       pattern$text = E$all;
     }
@@ -81,7 +89,7 @@ function matchPattern (){
     var alphabet$list = document.getElementById("alphabetlist").value;
     pattern$text = pattern$text.replace("|^)","|^)("+alphabet$list.toString()+")");
   }  
-  pattern$text = RegExp(pattern$text,'g')
+  pattern$text = case$insensitive ? RegExp(pattern$text,'gi') : RegExp(pattern$text,"g");
   var list$emails = text$principal.match(pattern$text);
   
   if (list$emails != null){
