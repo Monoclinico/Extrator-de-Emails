@@ -1,17 +1,17 @@
-var E$all = /(\b|\s|^)([a-z0-9\.\_]+)(\@)([a-z0-9\.]+)((\.com))((\.br)?)/;
-var E$gmail = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(gmail)((\.com))/;
-var E$hotmail = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(hotmail)((\.com))/;
-var E$outlook = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(outlook)((\.com))/;
-var E$yahoo = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(yahoo)((\.com))((\.br)?)/;
-var E$zoho = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(zoho)((\.com))((\.br)?)/;
-var E$icloud = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(icloud)((\.com))/;
-var E$uol = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(uol)((\.com))((\.br)?)/;
-var E$live = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(live)((\.com))/;
-var E$terra = /(\b|\s|^)([a-z0-9\.\_]+)(\@)(terra)((\.com))((\.br)?)/;
+var E$all = /(\b|\s|^)([a-z0-9\.\_\-]+)(\@)([a-z0-9\.]+)((\.com))((\.br)?)/;
+var E$gmail = /(\b|\s|^)([a-z0-9\.\_\-]+)(\@)(gmail)((\.com))/;
+var E$hotmail = /(\b|\s|^)([a-z0-9\.\_\-]+)(\@)(hotmail)((\.com))/;
+var E$outlook = /(\b|\s|^)([a-z0-9\.\_\-]+)(\@)(outlook)((\.com))/;
+var E$yahoo = /(\b|\s|^)([a-z0-9\.\_\-]+)(\@)(yahoo)((\.com))((\.br)?)/;
+var E$zoho = /(\b|\s|^)([a-z0-9\.\_\-]+)(\@)(zoho)((\.com))((\.br)?)/;
+var E$icloud = /(\b|\s|^)([a-z0-9\.\_\-]+)(\@)(icloud)((\.com))/;
+var E$uol = /(\b|\s|^)([a-z0-9\.\_\-]+)(\@)(uol)((\.com))((\.br)?)/;
+var E$live = /(\b|\s|^)([a-z0-9\.\_\-]+)(\@)(live)((\.com))/;
+var E$terra = /(\b|\s|^)([a-z0-9\.\_\-]+)(\@)(terra)((\.com))((\.br)?)/;
 
 document.body.onload = function () {
   document.getElementById("numberemailsn").innerHTML = 0;
-  document.getElementById("separator").value = null;
+  document.getElementById("separator").value = "";
   clearAll("datatext");
   clearAll("emails");
   var list$of$inputs = document.querySelectorAll("input[type='checkbox']");
@@ -118,5 +118,5 @@ function copyAll (){
 }
 
 function clearAll (area) {
-  document.getElementById(area).value = null;
+  document.getElementById(area).value = "";
 }
