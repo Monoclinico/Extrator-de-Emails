@@ -4,7 +4,7 @@
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <link rel="icon" href="imagens/icone.ico" type="image/x-icon"/>
-  <title>Extrator De Emails Bear - 100% Grátis</title>
+  <title>Extrator De Emails Bear</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' href='./mainstyle.css'>
 </head>
@@ -12,8 +12,13 @@
   <h1>Extrator de Emails<img id="img-logo" src="./imagens/logo.png" alt="logo de cara de urso" title="Extrator de Emails Bear"/>Bear</h1>
   <div id="main">
     <form id="menu" >
-      <div class="menu-boxs"><input type="checkbox" id="nonumbers"/><span>Só Emails sem Números</span></div>
-      <div class="menu-boxs"><input type="checkbox" id="checkalphabet"/><span>Emails que Começam com</span>
+      <div class="menu-boxs"><input type="checkbox" id="nonumbers"/><span class="menu-boxs-option">Só Emails sem Números</span></div>
+      <div class="menu-boxs"><input type="checkbox" id="withouthyphen"/><span class="menu-boxs-option">Só Emails sem Hifens</span></div>
+      <div class="menu-boxs"><input type="checkbox" id="alphaorder"/><span class="menu-boxs-option">Deixar em Ordem Alfabética</span></div>
+      <div class="menu-boxs"><input type="checkbox" id="caseinsensitive"/><span class="menu-boxs-option">Considerar Maiúsculas e Minúsculas</span></div>
+      <div class="menu-boxs"><input type="checkbox" id="lowerall"/><span class="menu-boxs-option">Deixar Emails em Minúsculo</span></div>
+      <div class="menu-boxs"><input type="checkbox" id="doublemails"/><span class="menu-boxs-option">Remover Duplicatas</span></div>
+      <div class="menu-boxs menu-boxs-full"><input type="checkbox" id="checkalphabet"/><span class="menu-boxs-option">Emails que Começam com</span>
       <select id="alphabetlist">
           <option value="a">a</option>
           <option value="b">b</option>
@@ -43,12 +48,8 @@
           <option value="z">z</option>
         </select>
       </div>
-      <div class="menu-boxs"><input type="checkbox" id="alphaorder"/><span>Deixar em Ordem Alfabética</span></div>
-      <div class="menu-boxs"><input type="checkbox" id="lowerall"/><span>Deixar Emails em Minúsculo</span></div>
-      <div class="menu-boxs"><input type="checkbox" id="caseinsensitive"/><span>Considerar Maiúsculas e Minúsculas</span></div>
-      <div class="menu-boxs"><input type="checkbox" id="doublemails"/><span>Remover Duplicatas</span></div>
-      <div class="menu-boxs">
-        <span>Separar Emails com</span>
+      <div class="menu-boxs menu-boxs-full">
+        <span class="menu-boxs-option">Separar Emails com</span>
         <input type="text" size="10" maxlength="10" id="separator" list="separatorslist" placeholder="Nova Linha"/>
         <datalist id="separatorslist">
           <option value="/">
@@ -68,7 +69,8 @@
     </form>
     <button id="testbutton">EXTRAIR</button>
     <select id="optionsmail">
-      <option value="all">Todos os tipos</option>
+      <option value="all">Todos os tipos (".br" dispensável)</option>
+      <option value="allbr">Todos os tipos (".com" dispensável)</option>
       <option value="gmail">Gmail</option>
       <option value="hotmail">Hotmail</option>
       <option value="outlook">Outlook</option> 
@@ -77,6 +79,7 @@
       <option value="zoho">Zoho</option>
       <option value="icloud">iCloud</option>
       <option value="uol">UOL</option>
+      <option value="bol">Bol</option>
       <option value="terra">Terra</option>
     </select>
     <button id="clearall">LIMPAR</button>
